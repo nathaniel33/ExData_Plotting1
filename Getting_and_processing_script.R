@@ -11,8 +11,13 @@ feb1 <- household_power_consumption[household_power_consumption$Date == "1/2/200
 feb2 <- household_power_consumption[household_power_consumption$Date == "2/2/2007", ]
 feb1and2 <- rbind(feb1, feb2)
 rm(list = c("feb1", "feb2", "household_power_consumption"))
+
+# Make a "datetime" column for plotting
+
 feb1and2$datetime <- paste(feb1and2$Date, feb1and2$Time)
 feb1and2$datetime <- strptime(feb1and2$datetime, "%d/%m/%Y %H:%M:%S")
+
+# Coerce "Global_active_power" column into numeric to make the histogram of plot1
 
 feb1and2$Global_active_power <- as.numeric(feb1and2$Global_active_power <- as.numeric(feb1and2$Global_active_power)
 )
