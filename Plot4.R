@@ -1,3 +1,4 @@
+source("Getting_and_processing_script.R")
 par(mfrow = c(2, 2), mar = c(4, 4, 1, 1))
 with(feb1and2, {
     plot(datetime, Global_active_power, ylab = "Global Active Power", type = "l")

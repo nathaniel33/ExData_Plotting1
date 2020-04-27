@@ -1,3 +1,4 @@
+source("Getting_and_processing_script.R")
 with(feb1and2, 
     plot(datetime, Sub_metering_1, ylab = "Energy sub metering", type = "n")
 )
